@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>fettching lecture</title>
+    </head>
+    <body>
+        <h1> regestration form </h1>
+        <form action="http://localhost:8000/success" method="post">
+            <label for="fn">FIRSTNAME: </label>
+            <input type="text" name="firstname" placeholder="enter first name" required>
+            <br>
+            <br>
+            <label for="ln">LASTNAME: </label>
+            <input type="text" name="lastname" placeholder="enter last name" required>
+            <br>
+            <br>
+            <label for="em">EMAIL: </label>
+            <input type="email" name="email" placeholder="enter your email" required>
+            <br>
+            <br>
+            <label for="pass">PASSWORD: </label>
+            <input type="password" name="password" placeholder="enter your password" required>
+            <br>
+            <br>
+            <label for="mob">MOB NO: </label>
+            <input type="number" name="mobilenumber" placeholder="enter mob num" required>
+            <br>
+            <br>
+            <label for="sex">GENDER:</label>
+            <label for="ml">MALE</label>
+            <input type="radio" name="gender" value="male" >
+            <label for="fl">fEMALE</label>
+            <input type="radio" name="gender" value="female" >
+            <br>
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
