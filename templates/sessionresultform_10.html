@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>session tutorial result page</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/sessionresultform10.css')}}">
+    </head>
+<body>
+    <h1>hey,login succesfull {{name}}</h1>
+    <a href="{{url_for('logoutt')}}">Logout</a>
+    <a href="{{url_for('profile')}}">click to see Profile </a>
+</body>
+</html>
