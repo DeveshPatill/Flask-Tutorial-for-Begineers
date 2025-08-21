@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            margin: 0;
+        }
+
+        .container-contact100 {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            text-align: center;
+        }
+
+        .contact100-form-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .wrap-input100 {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input100 {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .input100:focus {
+            border-color: #007bff;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .container-contact100-form-btn button {
+            background: #ff5757;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .container-contact100-form-btn button:hover {
+            background: #ff3333;
+        }
+    </style>
+</head>
+<body>
+<div class="container-contact100">
+    <form class="contact100-form" action="http://localhost:5000/contact" method="POST">
+        <span class="contact100-form-title">
+            Drop Us A Message
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <input class="input100" type="text" name="name" placeholder="Name">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Email is required">
+            <input class="input100" type="email" name="email" placeholder="Email Address">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Subject is required">
+            <input class="input100" type="text" name="subject" placeholder="Subject">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Message is required">
+            <textarea class="input100" name="message" placeholder="Write Us A Message"></textarea>
+        </div>
+
+        <div class="container-contact100-form-btn">
+            <button type="submit">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.querySelectorAll('.validate-input').forEach(function (wrapper) {
+        const input = wrapper.querySelector('.input100');
+        input.onblur = function () {
+            if (input.value.trim() === '') {
+                alert(wrapper.getAttribute('data-validate'));
+            }
+        };
+    });
+</script>
+</body>
+</html>
