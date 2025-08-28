@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(108, 216, 46);
+}
+head{
+    color: rgb(83, 83, 33);
+}
+div{
+    background-color:brown;
+}
+
+h1::after{
+    background-color: gold;
+}
+
